@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-remote
+  labels:
+    app: go-remote
+spec:
+  type: NodePort
+  selector:
+    app: go-remote
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      nodePort: 31000
+    - name: ssh
+      port: 22
+      targetPort: 22
+      nodePort: 31100
