@@ -24,6 +24,8 @@ spec:
           name: ssh
         - containerPort: 8080
           name: http
+        - containerPort: 2345
+          name: dlv
       volumes:
         - name: nfs
           nfs:

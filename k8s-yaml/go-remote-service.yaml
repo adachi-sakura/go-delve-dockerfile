@@ -17,3 +17,7 @@ spec:
       port: 22
       targetPort: 22
       nodePort: 31100
+    - name: dlv
+      port: 2345
+      targetPort: 2345
+      nodePort: 31345
